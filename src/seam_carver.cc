@@ -86,8 +86,7 @@ int SeamCarver::GetEnergy(int row, int col) const
   // returns {1, 0, 1, 2}
 int* SeamCarver::GetHorizontalSeam()
 {
-     int *seam_curve;
-     seam_curve = new int[width_];
+     int *seam_curve = new int[width_];
      InitMemo();
      FindmMinPathMemoDynamic(false);//calculate Seam
      //Seam Curve
@@ -133,8 +132,7 @@ int* SeamCarver::GetHorizontalSeam()
   // returns {1, 2, 2}
 int* SeamCarver::GetVerticalSeam() 
 {
-     int *seam_curve;
-     seam_curve = new int[height_];
+     int *seam_curve= new int[height_];
      InitMemo();
      FindmMinPathMemoDynamic(true);//calculate Seam
      //Seam Curve
